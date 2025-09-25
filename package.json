@@ -1,0 +1,23 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "build": "tsc",
+    "dev": "tsc && node dist/index.js"
+  },
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Una calculadora básica desarrollada con TypeScript, HTML y CSS que demuestra conceptos fundamentales de programación web moderna.",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.8",
+    "typescript": "^5.9.2"
+  }
+}
