@@ -4,7 +4,7 @@ let previousInput: string = '';
 
 function appendToDisplay(value: string): void {
     let update = false;
-    if (['+', '-', '*', '/'].includes(value)) {
+    if (['+', '-', '*', '/','√'].includes(value)) {
         if (currentInput !== '0' && currentInput !== '') {
             if (previousInput !== '' && operator !== '') {
                 calculate();
@@ -57,6 +57,13 @@ function calculate(): void {
             case '+':
                 result = prev + current;
                 break;
+            case '√':
+                if(current<0){
+                    alert("Error")
+                    return
+                }
+                result = Math.sqrt(current);
+                break;
             case '-':
                 result = prev - current;
                 break;
@@ -85,6 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDisplay();
     setupEventListeners();
 });
+
+
+
 
 function setupEventListeners(): void {
     const buttonsContainer = document.querySelector('.buttons');
